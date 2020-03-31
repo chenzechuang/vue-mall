@@ -1,9 +1,13 @@
 import Vue from "vue";
+import "./plugins/axios";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-import './icons'
+import "./icons";
+
+import Cube from "cube-ui";
+Vue.use(Cube);
 
 Vue.config.productionTip = false;
 
