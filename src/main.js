@@ -5,6 +5,7 @@ import router from "./router";
 import store from "./store";
 
 import "./icons";
+import "../mock";
 
 import Cube from "cube-ui";
 Vue.use(Cube);
