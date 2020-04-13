@@ -63,6 +63,16 @@ module.exports = {
       })
       .end();
 
+    config.module
+      .rule('eslint')
+      .use('eslint-loader')
+      .loader('eslint-loader')
+      .tap(options => {
+        options.fix = true
+        return options
+      })
+      .end();
+
     config.when(process.env.NODE_ENV === "development", config =>
       config.devtool("cheap-source-map")
     );
@@ -78,9 +88,6 @@ module.exports = {
   },
 
   pluginOptions: {
-    "cube-ui": {
-      postCompile: false,
-      theme: false
-    }
+    
   }
 };

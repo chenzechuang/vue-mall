@@ -7,8 +7,10 @@ import store from "./store";
 import "./icons";
 import "../mock";
 
-import Cube from "cube-ui";
-Vue.use(Cube);
+import "./util/rem";
+
+import vantUI from "./plugins/vant";
+Vue.use(vantUI);
 
 Vue.config.productionTip = false;
 
