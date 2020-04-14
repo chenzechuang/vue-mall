@@ -5,9 +5,14 @@ import router from "./router";
 import store from "./store";
 
 import "./icons";
-import "../mock";
 
-import "./util/rem";
+import "./utils/rem";
+
+console.log(axios);
+
+
+const { mockXHR } = require('../mock')
+mockXHR()
 
 import vantUI from "./plugins/vant";
 Vue.use(vantUI);

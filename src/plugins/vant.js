@@ -1,6 +1,6 @@
-import {Form, Field, Button} from "vant"
+import {Form, Field, Button, Tabbar, TabbarItem} from "vant"
 
-let vantUIs = [Form, Field, Button]
+let vantUIs = [Form, Field, Button, Tabbar, TabbarItem]
 
 export default {
   install(Vue) {

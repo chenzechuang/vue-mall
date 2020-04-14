@@ -9,7 +9,12 @@
 
 <script>
   export default {
-
+    name: 'Footer',
+    data() {
+      return {
+        active: 0
+      }
+    },
   }
 </script>
 
