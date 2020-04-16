@@ -1,7 +1,7 @@
 <template>
   <van-swipe :autoplay="3000">
-    <van-swipe-item v-for="(image, index) in images" :key="index">
-      <img v-lazy="image" />
+    <van-swipe-item v-for="(item, index) in list" :key="index">
+      <img v-lazy="item.image" />
     </van-swipe-item>
   </van-swipe>
 </template>
@@ -14,12 +14,15 @@ Vue.use(Lazyload);
 
 export default {
   name: "Swiper",
+  props: {
+    data: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
-      images: [
-        "https://img.yzcdn.cn/vant/apple-1.jpg",
-        "https://img.yzcdn.cn/vant/apple-2.jpg"
-      ]
+      list: this.data
     };
   }
 };

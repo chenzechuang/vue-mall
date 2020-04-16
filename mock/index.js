@@ -2,8 +2,10 @@ import Mock from 'mockjs'
 import { param2Obj } from '../src/utils'
 
 import user from './user'
+import goods from './goods'
 
 const mocks = [
+  ...goods,
   ...user,
 ]
 
