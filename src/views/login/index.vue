@@ -36,7 +36,7 @@
       onSubmit() {
         this.$store.dispatch('user/login', this.loginForm)
           .then(() => {
-            this.$router.push({ path: this.redirect || '/'})
+            this.$router.push({ path: this.redirect || '/home'})
             // this.loading = false
           })
           .catch(() => {

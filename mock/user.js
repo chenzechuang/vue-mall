@@ -1,4 +1,3 @@
-
 const tokens = {
   admin: {
     token: 'admin-token'
@@ -49,7 +48,7 @@ export default [
 
   // get user info
   {
-    url: '/vue-mall/user/info\.*',
+    url: '/vue-mall/user/info',
     type: 'get',
     response: config => {
       const { token } = config.query
@@ -74,7 +73,7 @@ export default [
   {
     url: '/vue-mall/user/logout',
     type: 'post',
-    response: _ => {
+    response: () => {
       return {
         code: 20000,
         data: 'success'

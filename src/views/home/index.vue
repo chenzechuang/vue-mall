@@ -1,15 +1,16 @@
 <template>
   <div>
-    <Footer></Footer>
+    home
+    <Swiper></Swiper>
   </div>
 </template>
 
 <script>
-  import Footer from '@/components/Footer'
+  import Swiper from '@/components/Swiper'
   export default {
-    components: [
-      Footer
-    ]
+    components: {
+      Swiper
+    }
   }
 </script>
 
