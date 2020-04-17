@@ -37,10 +37,9 @@
         this.$store.dispatch('user/login', this.loginForm)
           .then(() => {
             this.$router.push({ path: this.redirect || '/home'})
-            // this.loading = false
           })
-          .catch(() => {
-            // this.loading = false
+          .catch((error) => {
+            this.$notify({ type: 'danger', message: error });
           })
       }
     },

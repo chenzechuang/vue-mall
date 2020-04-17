@@ -1,9 +1,6 @@
-import {Form, Field, Button, Tabbar, TabbarItem, Swipe, SwipeItem} from "vant"
+import Vue from 'vue';
+import {Form, Field, Button, Tabbar, TabbarItem, Swipe, SwipeItem, Notify} from "vant"
 
-let vantUIs = [Form, Field, Button, Tabbar, TabbarItem, Swipe, SwipeItem]
+let vantUIs = [Form, Field, Button, Tabbar, TabbarItem, Swipe, SwipeItem, Notify]
 
-export default {
-  install(Vue) {
-    vantUIs.forEach(vantUI => [Vue.component(vantUI.name, vantUI)])
-  }
-}
+vantUIs.forEach(vantUI => Vue.use(vantUI))

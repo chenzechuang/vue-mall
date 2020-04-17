@@ -1,5 +1,6 @@
 import Vue from "vue";
 import "./plugins/axios";
+import "./plugins/vant";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -12,9 +13,6 @@ import "./utils/rem";
 
 const { mockXHR } = require('../mock')
 mockXHR()
-
-import vantUI from "./plugins/vant";
-Vue.use(vantUI);
 
 Vue.config.productionTip = false;
 

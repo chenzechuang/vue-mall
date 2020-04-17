@@ -21,9 +21,6 @@ const mutations = {
   },
   SET_AVATAR: (state, avatar) => {
     state.avatar = avatar
-  },
-  SET_ROLES: (state, roles) => {
-    state.roles = roles
   }
 }
 
@@ -33,10 +30,14 @@ const actions = {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
       login({ username: username.trim(), password: password }).then(response => {
-        const { data } = response.data
-        commit('SET_TOKEN', data.token)
-        setToken(data.token)
-        resolve()
+        const { data } = response
+        if (data.code === 200) {
+          commit('SET_TOKEN', data.token)
+          setToken(data.token)
+          resolve()
+        } else {
+          reject(data.message)
+        }
       }).catch(error => {
         reject(error)
       })
