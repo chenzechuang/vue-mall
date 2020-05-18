@@ -1,5 +1,8 @@
 # vue-mall
 
+## preview
+https://chenzechuang.github.io/vue-mall
+
 ## Project setup
 ```
 npm install
