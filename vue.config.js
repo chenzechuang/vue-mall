@@ -21,7 +21,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    /* proxy: {
+    proxy: {
       // change xxx-api/login => mock/login
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
@@ -32,7 +32,7 @@ module.exports = {
           ['^' + process.env.VUE_APP_BASE_API]: ''
         }
       }
-    }, */
+    },
     // before: require('./mock/index.js')
   },
   configureWebpack: {

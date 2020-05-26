@@ -2,14 +2,14 @@ import Vue from 'vue'
 
 export function getBanner() {
   return Vue.axios({
-    url: '/vue-mall/goods/banner',
+    url: '/goods/banner',
     method: 'get',
   })
 }
 
 export function getIconList() {
   return Vue.axios({
-    url: '/vue-mall/goods/iconList',
+    url: '/goods/iconList',
     method: 'get',
   })
 }
